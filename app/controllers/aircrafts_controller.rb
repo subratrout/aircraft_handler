@@ -11,7 +11,7 @@ class AircraftsController < ApplicationController
   def create
     @aircraft = Aircraft.new(aircraft_params)
     if @aircraft.save
-      redirect_to root_path, notice: "Aircraft  was added to the queue."
+      redirect_to root_path, notice: "#{@aircraft.aircraft_size} #{@aircraft.aircraft_type} aircraft was added to the queue."
     else
       render :new
     end
