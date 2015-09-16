@@ -1,3 +1,5 @@
+<h1> Add Aircraft </h1>
+
 <%= form_for(@aircraft) do |f| %>
   <fieldset>
     <ol>
@@ -6,7 +8,7 @@
         <%= f.select :aircraft_size, Aircraft::AIRCRAFT_SIZES, prompt: "Pick one" %>
       </li>
       <li class="required stars">
-        <%= f.label :stars %>
+        <%= f.label :aircraft_type %>
         <%= f.select :aircraft_type, Aircraft::AIRCRAFT_TYPES, prompt: "Pick one" %>
       </li>
     </ol>
