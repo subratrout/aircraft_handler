@@ -1,0 +1,18 @@
+<%= form_for(@aircraft) do |f| %>
+  <fieldset>
+    <ol>
+      <li class="required stars">
+        <%= f.label :aircraft_size %>
+        <%= f.select :aircraft_size, Aircraft::AIRCRAFT_SIZES, prompt: "Pick one" %>
+      </li>
+      <li class="required stars">
+        <%= f.label :stars %>
+        <%= f.select :aircraft_type, Aircraft::AIRCRAFT_TYPES, prompt: "Pick one" %>
+      </li>
+    </ol>
+    <p>
+      <%= f.submit 'Submit' %>
+      <%= link_to "Cancel", @aircraft, class: 'button' %>
+    </p>
+  </fieldset>
+<% end %>
