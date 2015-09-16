@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  que_name: MyString
+  aircraft_type: MyString
+  aircraft_size: MyString
+
+two:
+  que_name: MyString
+  aircraft_type: MyString
+  aircraft_size: MyString
