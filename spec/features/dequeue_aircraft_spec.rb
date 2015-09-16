@@ -7,7 +7,7 @@ describe 'Dequeue aircraft' do
     aircraft3 = Aircraft.create(aircraft_size: 'large', aircraft_type: 'cargp')
     aircraft4 = Aircraft.create(aircraft_size: 'small', aircraft_type: 'passenger')
 
-    visit 'root_path'
+    visit '/'
     expect(page).to have_content "Aircraft Queue"
 
     click_link 'Dequeue'

@@ -5,7 +5,7 @@ describe "view index" do
     aircraft1 = Aircraft.create(aircraft_size: 'large', aircraft_type: 'passenger')
     aircraft2 = Aircraft.create(aircraft_size: 'small', aircraft_type: 'cargo')
 
-    visit 'root_path'
+    visit '/'
 
     expect(page).to have_content 'Aircraft Queue'
     expect(page).to have_content 'passenger'

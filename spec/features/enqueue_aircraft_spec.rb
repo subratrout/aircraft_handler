@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'Add aircraft' do
   it "should add an aircraft to the queue" do
-    visit 'root_path'
+    visit '/'
     expect(page).to have_content "Aircraft Queue"
 
     click_link 'Enqueue'

@@ -1,9 +1,10 @@
 <h1> Aircraft Queue </h1>
 
-<%= @aircrafts.each do |aircraft| %>
-  <ol>
-    <li>Queue:<%= aircraft.queue_name %> </li>
-    <li>Type:<%= aircraft.aircraft_type %> </li>
-    <li>Size:<%= aircraft.aircraft_size%> </li>
-  </ol>  
+
+  <% @aircrafts.each do |aircraft| %>
+    <div class="aircraft">
+      <li>Queue:<%= aircraft.que_name %> </li>
+      <li>Size:<%= aircraft.aircraft_size%> </li>
+      <li>Type:<%= aircraft.aircraft_type %> </li>
+    </div>
   <% end %>
