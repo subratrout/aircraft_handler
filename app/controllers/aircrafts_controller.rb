@@ -17,6 +17,15 @@ class AircraftsController < ApplicationController
     end
   end
 
+  def dequeue
+    @dequeued_aircraft = Aircraft.dequeue
+    if @dequeued_aircraft.class.to_s == "Aircraft"
+      redirect_to root_path, notice: "The aircraft dequeued was: #{@dequeued_aircraft.aircraft_size} #{@dequeued_aircraft.aircraft_type}. There are #{Aircraft.count} aircrafts in the queue"
+    else
+      redirect_to root_path, notice: "No Aircraft to dequeue"
+    end
+  end
+
   private
 
   def aircraft_params

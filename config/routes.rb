@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :aircrafts
+  resources :aircrafts, only:[:index, :new, :create] do
+    collection do
+      delete :dequeue
+    end
+  end
 
   root 'aircrafts#index'
   # The priority is based upon order of creation: first created -> highest priority.

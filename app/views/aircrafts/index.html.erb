@@ -1,5 +1,6 @@
 <h1> Aircraft Queue </h1>
-
+<%= link_to "Enqueue", new_aircraft_path %>
+<%= link_to "Dequeue", dequeue_aircrafts_path, method: :delete %>
 
   <% @aircrafts.each do |aircraft| %>
     <div class="aircraft">
