@@ -2,6 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.aircraft {
+.aircraft tr {
+
+}
+
+.aircraft li {
+  list-style-type: none;
+}
+
+
+
+.list_line_even, .list_line_odd {
   border: 1px solid blue;
+  height: 60px;
+  width: 180px;
+  padding: 15px;
+  margin: 15px;
+  li {
+    list-style-type: none;
+  }
+}
+
+.list_line_even {
+  background: #509b9b;
+}
+
+.list_line_odd {
+  background: #d3d3d3;
 }

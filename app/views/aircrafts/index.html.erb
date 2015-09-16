@@ -3,7 +3,7 @@
 <%= link_to "Dequeue", dequeue_aircrafts_path, method: :delete %>
 
   <% @aircrafts.each do |aircraft| %>
-    <div class="aircraft">
+    <div height = "200px" class= "<%= cycle('list_line_odd', 'list_line_even') %>">
       <li>Queue:<%= aircraft.que_name %> </li>
       <li>Size:<%= aircraft.aircraft_size%> </li>
       <li>Type:<%= aircraft.aircraft_type %> </li>
